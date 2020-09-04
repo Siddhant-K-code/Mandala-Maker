@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Mandala Maker</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <div class="container">
+
+    <div class="controllers">
+        <div class="control">
+            Parts<br>
+            <input class="input" type="number" name="parts" min="2" max="24" step="2" value="12">
+        </div>
+
+        <div class="control">
+            Color<br>
+            <input class="color" type="color" name="color" value="#ff0000">
+        </div>
+
+        <div class="control">
+            Line width<br>
+            <input class="input" type="number" name="width" min="1" max="10" step="1" value="2">
+        </div>
+
+        <div class="control">
+            <label>
+                <input type="checkbox" onchange="setGrid(this);" checked>
+                Grid
+            </label>
+            <label>
+                <input type="checkbox" onchange="setMirrored(this);" checked>
+                Mirrored
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button onclick="clearCanvas();">
+                <i class="fas fa-trash"></i>
+                Clear
+            </button>
+            <button onclick="download()">
+                <i class="fas fa-save"></i>
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div class="mandala">
+        <canvas class="draw"></canvas>
+        <canvas class="base show"></canvas>
+    </div>
+</div>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    
+
+    
+  </body>
+</html>
